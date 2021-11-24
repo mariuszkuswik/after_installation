@@ -1,7 +1,6 @@
 #!/bin/bash
 
-
-##### ZMIENNE UZYTKOWNIKA #####
+##############################
 
 # Nazwa pliku z lista programow
 list_file="plik.txt" 
@@ -10,7 +9,7 @@ list_file="plik.txt"
 manpac[0]="dpkg"
 manpac[1]="rpm"
 
-# Managery instalacji, MUSZĄ być w tej samej kolejności co managery paczek
+# Managery instalacji, muszą być w tej samej kolejności co managery paczek
 instpac[0]="apt"
 instpac[1]="yum"
 
@@ -52,7 +51,8 @@ function installation () {
 }
 
 
-########### MAIN ###########
+# MAIN
+##############################
 
 # Dopóki nie zostanie odnaleziony manager paczek oraz nie przkroczymy długości tabclicy wykonuj 
 while [ $boolean -ne 1 ] && [ "$count" -lt "${#manpac[@]}" ]
